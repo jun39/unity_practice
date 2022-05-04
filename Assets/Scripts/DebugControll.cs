@@ -8,6 +8,7 @@ public class DebugControll : MonoBehaviour
     void Start()
     {
         Debug.Log(this.gameObject.activeSelf);
+        
     }
 
     // Update is called once per frame
