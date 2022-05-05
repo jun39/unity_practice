@@ -10,6 +10,7 @@ public class SamplePhysics : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        
     }
 
      void FixedUpdate()
@@ -21,11 +22,12 @@ public class SamplePhysics : MonoBehaviour
         rb.AddTorque(transform.forward*10.0f);
 
         rb.AddForce(transform.up*10.0f);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        rb.mass +=0.001f;
     }
 }
