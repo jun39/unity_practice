@@ -16,7 +16,8 @@ public class SamplePhysics : MonoBehaviour
     {
         torque = 1.0f;
         float turn = Input.GetAxis("Horizontal");
-        rb.AddTorque(transform.up * torque * turn);
+        rb.AddTorque(transform.up*10.0f);
+        rb.AddForce(transform.up*10.0f);
     }
 
     // Update is called once per frame
