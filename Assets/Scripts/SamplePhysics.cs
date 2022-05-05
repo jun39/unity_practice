@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SamplePhysics : MonoBehaviour
+{
+    public float torque;
+    public Rigidbody rb;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+     void FixedUpdate()
+    {
+        torque = 1.0f;
+        float turn = Input.GetAxis("Horizontal");
+        rb.AddTorque(transform.up * torque * turn);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
