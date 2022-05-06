@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SamplePhysics : MonoBehaviour
 {
     public float torque;
@@ -16,7 +17,7 @@ public class SamplePhysics : MonoBehaviour
      void FixedUpdate()
     {
         torque = 1.0f;
-        float turn = Input.GetAxis("Horizontal");
+        // float turn = Input.GetAxis("Horizontal");
         // rb.AddTorque(transform.up*10.0f);
         rb.AddTorque(transform.right*10.0f);
         rb.AddTorque(transform.forward*10.0f);
