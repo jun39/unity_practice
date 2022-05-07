@@ -29,8 +29,9 @@ public class MoveGravity : MonoBehaviour
                 moveDirection.y = jumpSpeed;
             }
         }
- 
+        // 重力の影響をy軸に加味する
         moveDirection.y = moveDirection.y - (gravity * Time.deltaTime);
+        // 時間の変化分だけ進む
         controller.Move(moveDirection * Time.deltaTime);
     }
 }
