@@ -17,9 +17,9 @@ public class CapsuleMove : MonoBehaviour
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         // オブジェクトの向きの座標（transform forward）をローカル座標からワールド座標に変換する
         float curSpeed = speed * Input.GetAxis("Vertical");
-        // controller.SimpleMove(forward * curSpeed);
+        controller.SimpleMove(forward * curSpeed);
         // Moveの移動量は絶対値、入力した分だけ進む
-        controller.Move(forward * curSpeed);
+        // controller.Move(forward * curSpeed);
 
     }
 }
