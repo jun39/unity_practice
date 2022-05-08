@@ -15,6 +15,7 @@ public class FadeOut : MonoBehaviour
     private IEnumerator Fade() 
     {
         
+        
         // MaterialのRendering modeをfadeにしないと透明度が変化しない
         // 消えたり、現れたりする敵がこれで作れる
     for (float ft = 1f; ft >= 0; ft -= 0.1f) 
