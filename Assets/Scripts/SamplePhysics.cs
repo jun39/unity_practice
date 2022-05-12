@@ -19,10 +19,10 @@ public class SamplePhysics : MonoBehaviour
         torque = 1.0f;
         // float turn = Input.GetAxis("Horizontal");
         // rb.AddTorque(transform.up*10.0f);
-        rb.AddTorque(transform.right*10.0f);
+        // rb.AddTorque(transform.right*10.0f);
         rb.AddTorque(transform.forward*10.0f);
 
-        rb.AddForce(transform.up*10.0f);
+        // rb.AddForce(transform.up*10.0f);
 
     }
 
