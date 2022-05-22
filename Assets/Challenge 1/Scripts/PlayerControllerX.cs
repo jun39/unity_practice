@@ -27,6 +27,7 @@ public class PlayerControllerX : MonoBehaviour
         transform.Translate(Vector3.forward * speed);
 
         // tilt the plane up/down based on up/down arrow keys
+        //rightだと、下方向のverticalInputがマイナスだから上方向に回転してしまう
 
         transform.Rotate(Vector3.left, verticalInput * Time.deltaTime * rotationSpeed);
     }
