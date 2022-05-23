@@ -9,7 +9,8 @@ public class ChatGUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Save saveclass = new Save();
+        saveclass.WriteData();
     }
 
     // Update is called once per frame
