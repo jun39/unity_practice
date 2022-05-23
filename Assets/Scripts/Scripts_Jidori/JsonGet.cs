@@ -12,18 +12,19 @@ public class JsonGet : MonoBehaviour
     }
 
     IEnumerator GetText() {
-        UnityWebRequest www = UnityWebRequest.Get("https://www.my-server.com");
-        yield return www.SendWebRequest();
+        // UnityWebRequest www = UnityWebRequest.Get("https://www.my-server.com");
+        UnityWebRequest wwwReddit = UnityWebRequest.Get("https://api.pushshift.io/reddit/search/comment/?q=science");
+        yield return wwwReddit.SendWebRequest();
  
-        if (www.result != UnityWebRequest.Result.Success) {
-            Debug.Log(www.error);
+        if (wwwReddit.result != UnityWebRequest.Result.Success) {
+            Debug.Log(wwwReddit.error);
         }
         else {
             // Show results as text
-            Debug.Log(www.downloadHandler.text);
+            Debug.Log(wwwReddit.downloadHandler.text);
  
             // Or retrieve results as binary data
-            byte[] results = www.downloadHandler.data;
+            byte[] results = wwwReddit.downloadHandler.data;
         }
     }
 
