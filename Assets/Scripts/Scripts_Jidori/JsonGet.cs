@@ -9,8 +9,18 @@ public class JsonGet : MonoBehaviour
     void Start()
     {
         StartCoroutine(GetText());
+
+        MyClass myObject = new MyClass();
+        myObject.myLevel=1;
+        myObject.myPosition=Vector3.zero;
+        myObject.myrName ="Taro";
+        string json = JsonUtility.ToJson(myObject);
+        Debug.Log(json);
     }
 
+// ここらへんのIEnumeratorがまとめて他のクラスでつくれてインスタンス化して、外部クラスから使えるか調べる
+// C#におけるインターフェースを調べる。あとSystem空間に何があるか
+// 自分でもインターフェースを作ってみる
     IEnumerator GetText() {
         // UnityWebRequest www = UnityWebRequest.Get("https://www.my-server.com");
         UnityWebRequest wwwReddit = UnityWebRequest.Get("https://api.pushshift.io/reddit/search/comment/?q=science");
