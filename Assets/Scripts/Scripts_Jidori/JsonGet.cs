@@ -3,19 +3,30 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 
+delegate void JsonProcess(string json);
+
+
 public class JsonGet : MonoBehaviour
 {
+
+// jsonをコマンドラインに表示するメソッド
+    static void JsonPrint(string json){
+        Debug.Log(json);
+    }
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(GetText());
-
+// MyClassを外部で作って、そのクラスをjsonに変更できるかを試した。
         MyClass myObject = new MyClass();
         myObject.myLevel=1;
         myObject.myPosition=Vector3.zero;
         myObject.myrName ="Taro";
         string json = JsonUtility.ToJson(myObject);
-        Debug.Log(json);
+        var process = new JsonProcess(JsonPrint);
+        process(json);
+
+
     }
 
 // ここらへんのIEnumeratorがまとめて他のクラスでつくれてインスタンス化して、外部クラスから使えるか調べる
@@ -39,3 +50,6 @@ public class JsonGet : MonoBehaviour
     }
 
 }
+
+
+
