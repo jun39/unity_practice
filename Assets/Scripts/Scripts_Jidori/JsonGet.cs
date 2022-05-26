@@ -1,18 +1,22 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
+// ActionやFuncなどの標準ライブラリのデリゲートはSystem名前空間にある
+using System;
 
 
-delegate void JsonProcess(string json);
 
 
 public class JsonGet : MonoBehaviour
 {
 
 // jsonをコマンドラインに表示するメソッド
-    static void JsonPrint(string json){
-        Debug.Log(json);
-    }
+    // static void JsonPrint(string json){
+    //     Debug.Log(json);
+    // }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +27,10 @@ public class JsonGet : MonoBehaviour
         myObject.myPosition=Vector3.zero;
         myObject.myrName ="Taro";
         string json = JsonUtility.ToJson(myObject);
-        var process = new JsonProcess(JsonPrint);
-        process(json);
+        myObject.JsonProcess(json,(string json)=>
+        {
+            Debug.Log(json);
+        });
 
 
     }
