@@ -6,6 +6,7 @@ using UnityEngine;
 // オブジェクトを追加する
 public class ChatGUI : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
