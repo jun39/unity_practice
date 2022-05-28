@@ -19,6 +19,7 @@ public class JsonGet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MyClass.ClassPurpose();
         
         StartCoroutine(GetText());
 // MyClassを外部で作って、そのクラスをjsonに変更できるかを試した。
@@ -27,6 +28,7 @@ public class JsonGet : MonoBehaviour
         
         myObject.SayHello();
         // myObject.SayHello(true);
+        
 
        
 

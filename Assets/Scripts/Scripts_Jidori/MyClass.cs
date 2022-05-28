@@ -10,6 +10,11 @@ public class MyClass:IDisposable
     public Vector3 myPosition;
     public string myName;
 
+
+    static MyClass(){
+        Debug.Log("最初のインスタンス化です");
+    }
+
     public MyClass(int myLevel,Vector3 myPosition,string myName){
         this.myLevel = myLevel;
         this.myPosition = myPosition;
@@ -29,7 +34,9 @@ public class MyClass:IDisposable
     }
 
     
-
+    static public void ClassPurpose(){
+        Debug.Log("MyClassは練習用に作られたクラスです");
+    }
     public void JsonProcess(string json,Action<string> action){
         action(json);
     }
