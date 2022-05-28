@@ -26,8 +26,15 @@ public class JsonGet : MonoBehaviour
         Debug.Log(myObject.myName);
         
         myObject.SayHello();
-        myObject.SayHello(true);
+        // myObject.SayHello(true);
 
+       
+
+        using(var tempClass = new MyClass()){
+            tempClass.SayHello(true);
+        }
+
+        
         string json = JsonUtility.ToJson(myObject);
         myObject.JsonProcess(json,(string json)=>
         {

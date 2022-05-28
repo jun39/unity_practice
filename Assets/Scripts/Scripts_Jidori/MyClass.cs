@@ -4,7 +4,7 @@ using UnityEngine;
 // ActionやFuncなどの標準ライブラリのデリゲートはSystem名前空間にある
 using System;
 
-public class MyClass
+public class MyClass:IDisposable
 {
     public int myLevel;
     public Vector3 myPosition;
@@ -22,6 +22,13 @@ public class MyClass
     ~MyClass(){
         Debug.Log("廃棄します");
     }
+
+    public void Dispose(){
+        Debug.Log("Disposeします");
+
+    }
+
+    
 
     public void JsonProcess(string json,Action<string> action){
         action(json);
