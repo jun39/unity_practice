@@ -15,8 +15,13 @@ public class MyClass
         this.myPosition = myPosition;
         this.myName = myName;
     }
-
+// コンストラクターのオーバーロード　引数なしだとこれになる
     public MyClass():this(1,Vector3.zero,"名無しさん"){}
+
+    // でコンストラクター
+    ~MyClass(){
+        Debug.Log("廃棄します");
+    }
 
     public void JsonProcess(string json,Action<string> action){
         action(json);
