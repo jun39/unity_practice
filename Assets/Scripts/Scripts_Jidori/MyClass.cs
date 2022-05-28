@@ -10,6 +10,14 @@ public class MyClass
     public Vector3 myPosition;
     public string myName;
 
+    public MyClass(int myLevel,Vector3 myPosition,string myName){
+        this.myLevel = myLevel;
+        this.myPosition = myPosition;
+        this.myName = myName;
+    }
+
+    public MyClass():this(1,Vector3.zero,"名無しさん"){}
+
     public void JsonProcess(string json,Action<string> action){
         action(json);
     }

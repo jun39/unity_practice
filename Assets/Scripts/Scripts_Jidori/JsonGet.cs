@@ -23,9 +23,8 @@ public class JsonGet : MonoBehaviour
         StartCoroutine(GetText());
 // MyClassを外部で作って、そのクラスをjsonに変更できるかを試した。
         MyClass myObject = new MyClass();
-        myObject.myLevel=1;
-        myObject.myPosition=Vector3.zero;
-        myObject.myName ="Taro";
+        Debug.Log(myObject.myName);
+        
         myObject.SayHello();
         myObject.SayHello(true);
 
