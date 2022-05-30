@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
+    
     public GameObject player;
 
     private Vector3 offset = new Vector3(0, 5, 7);
@@ -13,7 +14,7 @@ public class FollowPlayer : MonoBehaviour
         
     }
 
-    //ƒJƒƒ‰‚æ‚èæ‚ÉÔ‚ª“®‚­‚Í‚¸‚È‚Ì‚ÅLateUpdate
+    //ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉÔ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½È‚Ì‚ï¿½LateUpdate
     // Update is called once per frame
     void LateUpdate()
     {

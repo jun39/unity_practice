@@ -6,9 +6,9 @@ using System;
 
 public class MyClass:IDisposable
 {
-    public int myLevel;
-    public Vector3 myPosition;
-    public string myName;
+    public int myLevel{get;set;}
+    public Vector3 myPosition{get;set;}
+    public string myName{get;set;}
 
 
     static MyClass(){

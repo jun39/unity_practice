@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class FadeOut : MonoBehaviour
 {
-   
+    
 
     // Rendermodeの種類
     // https://qiita.com/waken/items/e8199effe7d2e07e4f29

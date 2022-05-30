@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MathMoveSample : MonoBehaviour
 {
+
     public float currStrength;
     public float maxStrength;
     public float recoveryRate;
