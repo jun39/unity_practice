@@ -8,6 +8,10 @@ public class ListBasic : MonoBehaviour
     List<int> list = new List<int>{1,4,5};
     static string[] verbs = new string[]{"はいあ","いえい"};
     LinkedList<string> listlink = new LinkedList<string>(verbs);
+
+    HashSet<string> friendsA = new HashSet<string> {"taro","Mickal","jun"};
+    HashSet<string> friendsB = new HashSet<string> {"taro","Mickal","Hanako"};
+
  
     void Start()
     {
@@ -17,6 +21,12 @@ public class ListBasic : MonoBehaviour
         foreach(var v in templist){
             Debug.Log(v);
         }
+        friendsA.IntersectWith(friendsB);
+        string[] tempSet = new string[2];
+        friendsA.CopyTo(tempSet);
+        Debug.Log (tempSet[0]);
+        Debug.Log (tempSet[1]);
+
 
     }
 
